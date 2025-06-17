@@ -42,13 +42,18 @@ This project is an intelligent medical assistant that combines a conversational 
 
 - Python 3.7+
 
-### Required Python Packages
+### Steps
 
-Install the dependencies using pip:
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/shaikhadil26/SymptomSense.git
+   cd SymptomSense
+   ```
 
-```bash
-pip install -r requirements.txt
-```
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 > **Note:**  
 > - ChatterBot may require additional setup for language corpora.
@@ -81,7 +86,7 @@ pip install -r requirements.txt
 ## Project Structure
 
 ```
-ML_DiseaseClassifier/
+SymptomSense/
 │
 ├── data/
 │   ├── ml_db.csv
@@ -94,7 +99,7 @@ ML_DiseaseClassifier/
 │   ├── app.py
 │   └── train_eval.ipynb
 │
-└── README.md
+├── README.md
 └── requirements.txt
 ```
 
@@ -156,4 +161,4 @@ ML_DiseaseClassifier/
 - **Data Quality:**  
   The accuracy of predictions depends on the quality and coverage of the dataset.
 - **ChatterBot Limitations:**  
-  The conversational AI is rule-based and may not handle complex or nuanced queries.
+  The conversational AI is somewhat rule-based and may not handle complex or nuanced queries.
