@@ -29,7 +29,7 @@ This project is an intelligent medical assistant that combines a conversational 
 
 ## Demo
 
-![Main Screen](./asset/main_screen.png)  
+![Main Screen](./assets/main_screen.png)  
 ![Diagnosis Screen](./assets/diagnosis_screen.png)  
 ![Results](./assets/results.png)  
 *The assistant answers queries and guides the user through a self-diagnosis session.*
