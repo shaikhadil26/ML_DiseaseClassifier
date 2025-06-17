@@ -8,21 +8,21 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QTextEdit, QLineEdit, QLabel
 import sys
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 
 cbot = ChatBot('Baymax')
 
 # Training the chat bot using yml files
 trainer = ChatterBotCorpusTrainer(cbot)
-
-trainer.train(r'C:\Users\Adil\Desktop\ML_Proj\cb_training\conversations.yml',
-              r'C:\Users\Adil\Desktop\ML_Proj\cb_training\greetings.yml',
-              r'C:\Users\Adil\Desktop\ML_Proj\cb_training\medical.yml',              
+trainer.train('../data/cbot_training/conversations.yml',
+              '../data/cbot_training/greetings.yml',
+              '../data/cbot_training/medical.yml',              
             )
 
-df = pd.read_csv(r'C:\Users\Adil\Desktop\ML_Proj\ML_db.csv')
+df = pd.read_csv('../data/ml_db.csv')
 
 # Label encoding the categorical data
-from sklearn.preprocessing import LabelEncoder
 label_encoder = LabelEncoder()
 
 for x in df.columns:
@@ -32,7 +32,6 @@ x = df.iloc[:, :37].values
 y = df['prognosis'].values
 
 # Splitting the data into train and test
-from sklearn.model_selection import train_test_split
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 # Creating models for diff classifiers

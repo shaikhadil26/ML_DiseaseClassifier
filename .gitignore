@@ -1,1 +1,7 @@
 /ML_Project_22_23_Report.pdf
+.DS_Store
+.vscode
+.git
+__pycache__
+.ipynb_checkpoints
+.venv
