@@ -29,7 +29,7 @@ This project is an intelligent medical assistant that combines a conversational 
 
 ## Demo
 
-![Main Screen](./assetsassets/main_screen.png)  
+![Main Screen](./asset/main_screen.png)  
 ![Diagnosis Screen](./assets/diagnosis_screen.png)  
 ![Results](./assets/results.png)  
 *The assistant answers queries and guides the user through a self-diagnosis session.*
@@ -95,10 +95,11 @@ ML_DiseaseClassifier/
 │   └── train_eval.ipynb
 │
 └── README.md
+└── requirements.txt
 ```
 
-- **`app.py`**: Main application file (GUI, ChatterBot, ML model).
-- **`train_eval.ipynb`**: Notebook for data exploration, preprocessing, and model evaluation.
+- **`src/app.py`**: Main application file (GUI, ChatterBot, ML model).
+- **`src/train_eval.ipynb`**: Notebook for data exploration, preprocessing, and model evaluation.
 - **`data/ml_db.csv`**: Symptom-disease dataset (37 symptoms, 1 prognosis column).
 - **`data/cbot_training/`**: ChatterBot training data (YAML format).
 
@@ -156,5 +157,3 @@ ML_DiseaseClassifier/
   The accuracy of predictions depends on the quality and coverage of the dataset.
 - **ChatterBot Limitations:**  
   The conversational AI is rule-based and may not handle complex or nuanced queries.
-
----
